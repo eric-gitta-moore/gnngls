@@ -9,6 +9,7 @@ export PATH=`pwd`:$PATH
 ```
 
 2、本项目依赖
+> 确保安装了 git lfs
 ```sh
 git submodule init
 git submodule update
