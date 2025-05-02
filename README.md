@@ -63,6 +63,19 @@ scripts
 6 directories, 517 files
 ```
 
+数据载入
+```py
+import pickle
+import pandas as pd
+import networkx as nx
+
+res = pd.read_pickle('./runs/May02_19-38-47_dec0554837bb4860ae1cd2a72026385d.pkl') # dataFrame
+data1 = nx.read_gpickle('./scripts/data/0017cba6fcf341b98031422b336695af.pkl') # graph
+lG = nx.line_graph(G) # 转 lineGraph
+for n in lG.nodes:
+    ...
+```
+
 ---
 
 # Graph Neural Network Guided Local Search for the Traveling Salesperson Problem
