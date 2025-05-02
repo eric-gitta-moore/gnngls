@@ -26,7 +26,7 @@ uv pip install -e .
 
 需要过程和结果数据直接拉 docker 自取
 ```sh
-docker run -it --rm ghcr.io/eric-gitta-moore/gnngls-test /bin/bash
+docker run -it --rm ghcr.io/eric-gitta-moore/gnngls-test:train-data /bin/bash
 ```
 
 ```diff
