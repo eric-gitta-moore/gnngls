@@ -24,6 +24,45 @@ cd external/pyconcorde
 uv pip install -e .
 ```
 
+需要过程和结果数据直接拉 docker 自取
+```sh
+docker run -it --rm ghcr.io/eric-gitta-moore/gnngls-test /bin/bash
+```
+
+```diff
+scripts
+├── 4b02e2042.res
+├── O4b02e2042.res
++├── data
+│   ├── 0017cba6fcf341b98031422b336695af.pkl
+│   ├── 0018cf4b489a43e0aa42491fd3ec9bec.pkl
+│   ├── 016e6746fc3b406499897499fc7b1274.pkl
+│   ├── 0265aad0ef8446949b91598d61286887.pkl
+│   ├── 0282ab6be4c242cab16f766771ce361b.pkl
+│   ├── ...
++│   ├── scalers.pkl
++│   ├── test.txt
++│   ├── train.txt
++│   └── val.txt
+├── generate_instances.py
+├── models
++│   ├── May02_17-56-50_ee90404d960d414294ad360db5764202
++│   │   ├── checkpoint_best_val.pt
++│   │   ├── checkpoint_final.pt
++│   │   ├── events.out.tfevents.1746179810.LXMW72K6MW.59995.0
++│   │   └── params.json
+│   └── tsp20
+│       ├── checkpoint_best_val.pt
+│       └── params.json
+├── preprocess_dataset.py
++├── runs
++│   └── May02_19-38-47_dec0554837bb4860ae1cd2a72026385d.pkl
+├── test.py
+└── train.py
+
+6 directories, 517 files
+```
+
 ---
 
 # Graph Neural Network Guided Local Search for the Traveling Salesperson Problem
