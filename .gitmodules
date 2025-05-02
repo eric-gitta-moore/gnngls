@@ -1,0 +1,6 @@
+[submodule "external/gnngls"]
+	path = external/gnngls
+	url = https://github.com/proroklab/gnngls
+[submodule "external/pyconcorde"]
+	path = external/pyconcorde
+	url = https://github.com/jvkersch/pyconcorde
