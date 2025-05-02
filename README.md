@@ -1,3 +1,31 @@
+1、LKH-3 依赖
+```sh
+wget http://akira.ruc.dk/~keld/research/LKH-3/LKH-3.0.6.tgz
+tar xvfz LKH-3.0.6.tgz
+cd LKH-3.0.6
+make
+# sudo cp LKH /usr/local/bin
+export PATH=`pwd`:$PATH
+```
+
+2、本项目依赖
+```sh
+git submodule init
+git submodule update
+
+pip insatll uv
+uv sync
+export PYTHONPATH=`pwd`
+```
+
+3、pyconcorde 依赖（macOS 15,8 完美运行，不用任何处理）
+```sh
+cd external/pyconcorde
+uv pip install -e .
+```
+
+---
+
 # Graph Neural Network Guided Local Search for the Traveling Salesperson Problem
 
 Code accompanying the paper [Graph Neural Network Guided Local Search for the Traveling Salesperson Problem](https://arxiv.org/abs/2110.05291).
