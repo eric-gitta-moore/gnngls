@@ -17,6 +17,9 @@ import tqdm.auto as tqdm
 import gnngls
 from gnngls import algorithms, models, datasets
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Test model')
     parser.add_argument('data_path', type=pathlib.Path)

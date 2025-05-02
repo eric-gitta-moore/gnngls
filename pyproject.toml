@@ -13,15 +13,17 @@ dependencies = [
     "tensorboard==2.8.*",
     "tqdm>=4",
     "dglgo",
-    "dgl-cu111",
-    'numpy==1.22.*',
+    'numpy==1.24.1',
     # 版本匹配 https://pytorch.org/get-started/previous-versions/
-    "torch==1.10.*",
-    "torchvision==0.11.*",
-    "torchaudio==0.10.*",
+    "torch==2.1.*",
+    "torchvision==0.16.*",
+    "torchaudio==2.1.*",
     # "git+https://github.com/jvkersch/pyconcorde",
     # "git+https://github.com/ben-hudson/pylkh",
     "lkh>=1.1.1",
+    "dgl>=2.1.0",
+    "torchdata==0.7.*",
+    "protobuf==3.20.*",
 ]
 
 [project.optional-dependencies]
@@ -35,13 +37,10 @@ dependencies = [
 index-strategy = "unsafe-best-match"
 
 [[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
+include = ["torch", "torchvision", "torchaudio"]
+explicit = true
+
+[[tool.uv.index]]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 default = true
-
-[[tool.uv.index]]
-url = "https://data.dgl.ai/wheels/repo.html"
-include = ["dgl-cu111"]
-
-[[tool.uv.index]]
-url = "https://download.pytorch.org/whl/cu111"
-include = ["torch", "torchvision", "torchaudio"]
