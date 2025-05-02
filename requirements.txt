@@ -1,0 +1,9 @@
+jupyter
+matplotlib
+pandas
+tensorboard
+tqdm
+scikit-learn
+setuptools
+# git+https://github.com/jvkersch/pyconcorde
+# git+https://github.com/ben-hudson/pylkh 

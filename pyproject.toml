@@ -1,0 +1,47 @@
+[project]
+name = "gnngls"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.8.*"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib==3.5.*",
+    "pandas==1.4.*",
+    "scikit-learn>1,<2",
+    "setuptools==62.1.*",
+    "tensorboard==2.8.*",
+    "tqdm>=4",
+    "dglgo",
+    "dgl-cu111",
+    'numpy==1.22.*',
+    # 版本匹配 https://pytorch.org/get-started/previous-versions/
+    "torch==1.10.*",
+    "torchvision==0.11.*",
+    "torchaudio==0.10.*",
+    # "git+https://github.com/jvkersch/pyconcorde",
+    # "git+https://github.com/ben-hudson/pylkh",
+    "lkh>=1.1.1",
+]
+
+[project.optional-dependencies]
+# cuda = ["dgl-cu111"]
+# dev = [
+#     # 在可选依赖中添加 git 包
+#     "git+https://github.com/example/dev-tool.git@develop"
+# ]
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true
+
+[[tool.uv.index]]
+url = "https://data.dgl.ai/wheels/repo.html"
+include = ["dgl-cu111"]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu111"
+include = ["torch", "torchvision", "torchaudio"]
